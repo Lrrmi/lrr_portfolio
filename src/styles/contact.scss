@@ -1,0 +1,23 @@
+@import './variables';
+
+.contact {
+
+    * {
+        color: $secondary-color;
+    }
+
+    .contactsLinkedin {
+        .contactsLinkedinLabel {
+            width: 25%;
+            float: left;
+        }
+    }
+
+    .contactsEmail {
+        .contactsEmailLabel {
+            width: 25%;
+            float: left;
+        }
+    }
+
+}

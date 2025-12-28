@@ -1,0 +1,120 @@
+@import './variables';
+
+$bottom-margin: 5vh;
+$project-card-height: calc(100vh - var(--nav-height) - ($bottom-margin * 2));
+
+.project {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    width: 100%;
+    height: fit-content;
+    position: absolute;
+    left: 0;
+    top: var(--nav-height);
+
+    .drawLine {
+        width: 90vw;
+        height: 1px;
+        background-color: $secondary-color;
+        margin-bottom: $bottom-margin;
+        margin-top: $bottom-margin;
+        margin-left: 5vw;
+        position: sticky;
+        left: 5vw;
+    }
+
+    .project-card {
+        width: fit-content;
+        height: $project-card-height;
+        padding-top: 0;
+        display: flex;
+        flex-direction: row;
+
+        @media (orientation: landscape) {
+            margin-top: 5vh;
+            margin-left: 5vw;
+        }
+
+        .projectDetails {
+            flex: .33;
+            width: 33vw;
+            margin-left: 5vw;
+            margin-right: 2.5vw;
+            height: inherit;
+
+            @media (orientation: portrait) {
+                width: 60vw;
+            }
+
+            * {
+                color: $secondary-color;
+            }
+
+            p {
+                overflow-wrap: break-word;
+                white-space: normal;
+            }
+        }
+
+        .primaryImageDisplay {
+            flex: .33;
+            width: 33vw;
+            max-width: 33vh;
+            height: inherit;
+            display: flex;
+            flex-direction: column;
+            gap: 2vh;
+            margin-right: 2vw;
+
+            @media (orientation: portrait) {
+                width: 100vw;
+            }
+
+            .primaryImageDiv {
+                flex: 0.5;
+                height: 50%;
+                text-align: center;
+
+                img {
+                    height:100%;
+                    max-width:100%;
+                }
+            }
+
+            .modelViewerDiv {
+                flex: 0.5;
+                height: 50%;
+                width: inherit;
+                max-width: inherit;
+                text-align: center;
+                position: relative;
+
+                model-viewer {
+                    display: block;
+                    height: 100%;
+                    width: 100%;
+                    --primary-color: #{$model-color};
+
+                    .container {
+                        height: 100%;
+                    }
+                }
+            }
+        }
+
+        .secondaryImageDisplay {
+            flex: .34;
+            width: fit-content;
+            height: inherit;
+            display: flex;
+            flex-direction: row;
+            gap: 2vw;
+
+            img {
+                flex: 1;
+                height: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,74 @@
+[
+    {
+        "title": "Seville",
+        "description": "<Insert Seville Chair Description>",
+        "date": "11/05/2025",
+        "page_name": "/seville",
+        "primary_image": "/images/1Seville/Seville_Lineart_01.png",
+        "model": "/models/SevilleChair.glb",
+        "secondary_images": ["/images/1Seville/SEV_1.jpg", "/images/1Seville/SEV_2.jpg", "/images/1Seville/SEV_3.jpg", "/images/1Seville/SEV_4.jpg"]
+    },
+    {
+        "title": "Slade",
+        "description": "<Insert Slade Description>",
+        "date": "11/05/2025",
+        "page_name": "/slade",
+        "primary_image": "/images/2Slade/Slade_Lineart_01.png",
+        "model": "/models/SladeLounge.glb",
+        "secondary_images": ["/images/2Slade/SLA_1.jpg", "/images/2Slade/SLA_2.jpg", "/images/2Slade/SLA_3.jpg", "/images/2Slade/SLA_4.jpg"]
+    },
+    {
+        "title": "Savannah",
+        "description": "<Insert Savannah Description>",
+        "date": "11/05/2025",
+        "page_name": "/savannah",
+        "primary_image": "/images/3Savannah/Savannah_LineArt 01.png",
+        "model": "/models/SAVDHChair.glb",
+        "secondary_images": ["/images/3Savannah/SAV_1.png", "/images/3Savannah/SAV_2.png", "/images/3Savannah/SAV_3.jpg"]
+    },
+    {
+        "title": "Orchid",
+        "description": "<Insert Orchid Description>",
+        "date": "11/05/2025",
+        "page_name": "/orchid",
+        "primary_image": "/images/4Orchid/Orchid_Lineart 01.png",
+        "model": "/models/CALDHChair.glb",
+        "secondary_images": ["/images/4Orchid/ORC_1.png", "/images/4Orchid/ORC_2.png", "/images/4Orchid/ORC_3.png", "/images/4Orchid/ORC_4.jpg"]
+    },
+    {
+        "title": "Light Weight",
+        "description": "<Insert Light Weight Description>",
+        "date": "11/05/2025",
+        "page_name": "/lightweight",
+        "primary_image": "/images/7LightWeight/LW_Lineart 02.png",
+        "model": "/models/LightWeight.glb",
+        "secondary_images": ["/images/7LightWeight/LightWeight_Parts.jpg", "/images/7LightWeight/LIW_1.png", "/images/7LightWeight/LIW_2.png", "/images/7LightWeight/LIW_3.jpg"]
+    },
+    {
+        "title": "Edda",
+        "description": "<Insert Edda Description>",
+        "date": "11/05/2025",
+        "page_name": "/edda",
+        "primary_image": "/images/9Edda/EDDA_1.JPG",
+        "model": "/models/EddaTable.glb",
+        "secondary_images": ["/images/9Edda/EDDA_2.JPG", "/images/9Edda/EDDA_3.JPG", "/images/9Edda/EDDA_4.JPG", "/images/9Edda/EDDA_5.JPG", "/images/9Edda/EDDA_6.JPG", "/images/9Edda/EDDA_7.JPG", "/images/9Edda/EDDA_8.JPG"]
+    },
+    {
+        "title": "Para",
+        "description": "<Insert Para Description>",
+        "date": "11/05/2025",
+        "page_name": "/para",
+        "primary_image": "/images/10Para/PARA_1.JPG",
+        "model": "/models/ParaChair.glb",
+        "secondary_images": ["/images/10Para/PARA_2.JPG", "/images/10Para/PARA_3.JPG"]
+    },
+    {
+        "title": "Saint Simon",
+        "description": "<Insert Saint Simon Description>",
+        "date": "11/05/2025",
+        "page_name": "/saintsimon",
+        "primary_image": "/images/11SaintSimon/STS_1.png",
+        "model": "/models/STSDHChair.glb",
+        "secondary_images": ["/images/11SaintSimon/STS_2.jpg", "/images/11SaintSimon/STS_3.png", "/images/11SaintSimon/STS_4.png"]
+    }
+]

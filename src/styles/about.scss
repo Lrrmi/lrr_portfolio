@@ -1,0 +1,21 @@
+@import './variables';
+
+.about {
+
+    .aboutHeader {
+        color: $secondary-color;
+        padding-bottom: 4vh;
+    }
+
+    .aboutDiv {
+        .aboutImage {
+            float: right;
+            padding-left: 2vw;
+        }
+
+        .aboutContent {
+            color: $secondary-color;
+            padding-top: 5vh;
+        }
+    }
+}
