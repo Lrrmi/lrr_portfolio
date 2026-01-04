@@ -2,8 +2,22 @@
 
 .contact {
 
+    display: flex;
+
     * {
         color: $secondary-color;
+    }
+
+    .contactsText {
+        flex: 1;
+    }
+
+    .contactsImage {
+        flex: 1;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .contactsLinkedin {
@@ -19,5 +33,7 @@
             float: left;
         }
     }
+
+
 
 }

@@ -11,16 +11,20 @@ export default function Project({ projectTitle }) {
         const modelColor = getComputedStyle(modelViewer).getPropertyValue('--primary-color');
 
         modelViewer.addEventListener('load', () => {
-          const modelViewerModel = modelViewer.model;
-          if (!modelViewerModel) return;
-    
-          modelViewerModel.materials.forEach((material) => {
-            material.pbrMetallicRoughness.setBaseColorFactor(modelColor);
-          })
+            const modelViewerModel = modelViewer.model;
+            if (!modelViewerModel) return;
+
+            modelViewerModel.materials.forEach((material) => {
+                material.pbrMetallicRoughness.setBaseColorFactor(modelColor);
+            })
         });
 
         window.scrollTo(0, 0);
         const projectDiv = document.querySelector('.project');
+        const body = document.body;
+
+        const prevOverflow = body.style.overflow;
+        body.style.overflow = 'hidden';
 
         const onWheel = (e) => {
             e.preventDefault();
@@ -30,7 +34,8 @@ export default function Project({ projectTitle }) {
         window.addEventListener('wheel', onWheel, { passive: false });
 
         return () => {
-        window.removeEventListener('wheel', onWheel);
+            window.removeEventListener('wheel', onWheel);
+            body.style.overflow = prevOverflow;
         };
     });
 

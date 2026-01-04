@@ -2,10 +2,11 @@
 @use './index';
 @import './variables';
 
-html, #root {
+html,
+#root {
     width: 100vw;
     height: 100vh;
-    background-color:$primary-color;
+    background-color: $primary-color;
     font-family: Arial, Helvetica, sans-serif;
 
     #root {
@@ -21,15 +22,15 @@ html, #root {
         position: fixed;
         top: 0;
         width: 100%;
-        height:fit-content;
+        height: fit-content;
         transition: transform 0.3s ease;
         z-index: 9999;
-        padding-top: 5vh;
-        padding-left: 5vw;
+        padding-top: 4vh; /// logo
+        padding-left: 2vw; /// logo
         background-color: $tertiary-color;
 
         .container {
-            margin-left:0;
+            margin-left: 0;
         }
 
         @media (orientation: portrait) {
@@ -38,6 +39,7 @@ html, #root {
 
         .navbar-brand {
             height: calc(var(--nav-height) / 2);
+            // transform: translateX(-10px);
 
             img {
                 height: calc(var(--nav-height) / 2);
@@ -73,5 +75,11 @@ html, #root {
 
     nav.hide {
         transform: translateY(-100%);
+    }
+
+    #routeContainer {
+        max-width: none;
+        padding-left: 0;
+        padding-right: 0;
     }
 }

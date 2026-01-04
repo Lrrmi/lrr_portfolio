@@ -1,0 +1,21 @@
+@import './variables';
+
+$bottom-margin: 5vh;
+
+.potpourri {
+    margin-left: 5vw;
+
+    .drawLine {
+        position: absolute;
+        left: 5vw;
+        width: 90vw;
+        height: 1px;
+        background-color: $secondary-color;
+    }
+
+    .potpourriImage {
+        margin: 0;
+        padding: 1.5vh 1.5vw;
+        vertical-align: top;
+    }
+}

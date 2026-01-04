@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './components/App.js';
-import reportWebVitals from './scripts/reportWebVitals.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@google/model-viewer';
 import { GetProjects } from './scripts/projectDataHandler.js';
@@ -34,17 +33,17 @@ export default function Index() {
   });
 
   return <div className="modelViewerDiv">
-      <model-viewer
-        className="modelViewer"
-        src={projectModel}
-        alt="A 3D model"
-        camera-controls
-        shadow-intensity="2"
-        disable-zoom
-        scale="1.3 1.3 1.3"
-        color="#ff0000"
-      />
-    </div>;
+    <model-viewer
+      className="modelViewer"
+      src={projectModel}
+      alt="A 3D model"
+      camera-controls
+      shadow-intensity="2"
+      disable-zoom
+      scale="1.3 1.3 1.3"
+      color="#ff0000"
+    />
+  </div>;
 }
 
 function getRandomInt(min, max) {
@@ -52,8 +51,3 @@ function getRandomInt(min, max) {
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

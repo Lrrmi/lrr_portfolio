@@ -11,8 +11,20 @@ import Projects from './Projects.js';
 import Project from './Project.js';
 import About from './About.js';
 import Contact from './Contact.js';
-import EtCetera from './EtCetera.js';
+import Potpourri from './Potpourri.js';
 import TestZone from './TestZone.js';
+
+const handleClick = (e) => {
+  // remove underline from all nav links
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.style.textDecoration = 'none';
+  });
+
+  // underline only the clicked link
+  e.currentTarget.style.textDecoration = 'underline';
+  e.currentTarget.style.textUnderlineOffset = '6px';
+  e.currentTarget.style.textDecorationThickness = '1px';
+};
 
 function App() {
   // Add listeners
@@ -35,11 +47,11 @@ function App() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <NavLink as={Link} to="/projects">projects</NavLink>
-              <NavLink as={Link} to="/about">about</NavLink>
-              <NavLink as={Link} to="/contact">contact</NavLink>
-              <NavLink as={Link} to="/etcetera">et cetera</NavLink>
-              <NavLink as={Link} to="/testzone">Test Zone</NavLink>
+              <NavLink as={Link} to="/projects" onClick={handleClick}>projects</NavLink>
+              <NavLink as={Link} to="/about" onClick={handleClick}>about</NavLink>
+              <NavLink as={Link} to="/contact" onClick={handleClick}>contact</NavLink>
+              <NavLink as={Link} to="/potpourri" onClick={handleClick}>potpourri</NavLink>
+              <NavLink as={Link} to="/testzone" onClick={handleClick}>Test Zone</NavLink>
             </Nav>
           </Navbar.Collapse>
         </Container>
@@ -52,7 +64,7 @@ function App() {
           <Route path="/projects" element={<Projects />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/etcetera" element={<EtCetera />} />
+          <Route path="/potpourri" element={<Potpourri />} />
           <Route path="/testzone" element={<TestZone />} />
           {projects.map(project => (
             <Route path={project.page_name} element={<Project projectTitle={project.title} />} />
