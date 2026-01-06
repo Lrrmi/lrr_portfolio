@@ -5,14 +5,13 @@
     width: 100%;
     box-sizing: border-box;
     max-width: 100vw;
-    padding-left: '15px';
-    padding-right: '15px';
-    margin-left: calc(-43.5vw + 50%);
+    margin-left: calc(-43.5vw + 52%);
 
     .projectNames {
-        width: 25%;
-        flex: .25;
-        margin-top: 10vh;
+        flex: 0 auto;
+        width: max-content;
+        text-align: right;
+        margin-right: 20rem;
 
         @media (orientation: portrait) {
             display: none;
@@ -39,7 +38,7 @@
         .projectsDisplayContainer {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 1vw;
+            gap: 5vw;
 
             .projectImageLink {
                 height: 33vh;
@@ -55,6 +54,21 @@
                 img:hover {
                     filter: grayscale(0%);
                 }
+            }
+
+            .projectImageLink:nth-child(odd) {
+                justify-self: start;
+                margin-right: -10%;
+            }
+
+            .projectImageLink:nth-child(2),
+            .projectImageLink:nth-child(8) {
+                justify-self: end;
+            }
+
+            .projectImageLink:nth-child(4),
+            .projectImageLink:nth-child(6) {
+                justify-self: center;
             }
         }
     }

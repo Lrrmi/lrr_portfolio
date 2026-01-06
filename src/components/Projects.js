@@ -10,12 +10,14 @@ export default function Projects() {
     return (
         <div className="projects">
             <div className="projectNames">
+                <div>
                 {projects.map(project => (
                     <Link class="projectLink" to={project.page_name}>{project.title}</Link>
                 ))}
+                </div>
             </div>
             <div className="projectsDisplay">
-                <div className="drawLine"></div>
+                <div className="drawLine" />
                 <div className="projectsDisplayContainer">
                     {projects.map(project => (
                         <Link draggable="false" class="projectImageLink" to={project.page_name}><img draggable="false" src={project.primary_image} alt="Visual of the given project" /></Link>
