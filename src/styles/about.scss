@@ -13,6 +13,14 @@
             padding-left: 2vw;
         }
 
+        .drawLine {
+        position: absolute;
+        left: 5vw;
+        width: 90vw;
+        height: 1px;
+        background-color: $secondary-color;
+    }
+
         .aboutContent {
             color: $secondary-color;
             padding-top: 5vh;
