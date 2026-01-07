@@ -12,6 +12,14 @@
         flex: 1;
     }
 
+    .drawLine {
+        position: absolute;
+        left: 5vw;
+        width: 90vw;
+        height: 1px;
+        background-color: $secondary-color;
+    }
+
     .contactsImage {
         flex: 1;
 

@@ -52,6 +52,9 @@ export default function About() {
                         except a large order of drills he was hoping to get that day.
                     </p>
                 </div>
+                <br></br><br></br>
+                <div className="drawLine"></div>
+                <br></br><br></br>
             </div>
         </div>
     );

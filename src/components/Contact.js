@@ -33,6 +33,8 @@ export default function Contacts() {
                     <p>Concept Modeling and Initial Manufacturing Drawings</p>
                     <br></br>
                     <p>Small Scale Prototyping</p>
+                    <br></br>
+                    <div className="drawLine"></div>
                 </div>
             </div>
             <div className="contactsImage"></div>
