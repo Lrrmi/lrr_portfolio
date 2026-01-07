@@ -35,6 +35,8 @@ export default function Contacts() {
                     <p>Small Scale Prototyping</p>
                     <br></br>
                     <div className="drawLine"></div>
+                    <br></br>
+                    <br></br>
                 </div>
             </div>
             <div className="contactsImage"></div>
