@@ -1,74 +1,90 @@
 @import './variables';
 
-.projects {
-    display: flex;
-    width: 100%;
-    box-sizing: border-box;
-    max-width: 100vw;
-    margin-left: calc(-43.5vw + 52%);
+.arrowWrapper {
+    position: relative;
 
-    .projectNames {
-        flex: 0 auto;
-        width: max-content;
-        text-align: right;
-        margin-right: 20rem;
-
-        @media (orientation: portrait) {
-            display: none;
-        }
-
-        .projectLink {
-            text-decoration: none;
-            color: $secondary-color;
-            display: block;
-            padding-top: 1vh;
-        }
+    .topArrow {
+        position: fixed;
+        right: 5%;
+        bottom: 8%;
     }
 
-    .projectsDisplay {
-        flex: .75;
+    .bottomArrow {
+        position: fixed;
+        right: 5%;
+        bottom: 5%;
+    }
 
-        .drawLine {
-            width: 100%;
-            height: 1px;
-            background-color: $secondary-color;
-            margin-bottom: 5vh;
+    .projects {
+        display: flex;
+        width: 100%;
+        box-sizing: border-box;
+        max-width: 100vw;
+        margin-left: calc(-43.5vw + 52%);
+
+        .projectNames {
+            flex: 0 auto;
+            width: max-content;
+            text-align: right;
+            margin-right: 20rem;
+
+            @media (orientation: portrait) {
+                display: none;
+            }
+
+            .projectLink {
+                text-decoration: none;
+                color: $secondary-color;
+                display: block;
+                padding-top: 1vh;
+            }
         }
 
-        .projectsDisplayContainer {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 5vw;
+        .projectsDisplay {
+            flex: .75;
 
-            .projectImageLink {
-                height: 33vh;
+            .drawLine {
+                width: 100%;
+                height: 1px;
+                background-color: $secondary-color;
+                margin-bottom: 5vh;
+            }
 
-                img {
-                    height: inherit;
-                    width: inherit;
+            .projectsDisplayContainer {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 5vw;
 
-                    filter: grayscale(100%);
-                    transition: filter 0.5s ease;
+                .projectImageLink {
+                    height: 33vh;
+
+                    img {
+                        height: inherit;
+                        width: inherit;
+
+                        filter: grayscale(100%);
+                        transition: filter 0.5s ease;
+                    }
+
+                    img:hover {
+                        filter: grayscale(0%);
+                    }
                 }
 
-                img:hover {
-                    filter: grayscale(0%);
+                .projectImageLink:nth-child(odd) {
+                    justify-self: start;
+                    margin-right: -10%;
                 }
-            }
 
-            .projectImageLink:nth-child(odd) {
-                justify-self: start;
-                margin-right: -10%;
-            }
+                .projectImageLink:nth-child(2),
+                .projectImageLink:nth-child(8) {
+                    justify-self: end;
+                }
 
-            .projectImageLink:nth-child(2),
-            .projectImageLink:nth-child(8) {
-                justify-self: end;
-            }
-
-            .projectImageLink:nth-child(4),
-            .projectImageLink:nth-child(6) {
-                justify-self: center;
+                .projectImageLink:nth-child(4),
+                .projectImageLink:nth-child(6) {
+                    justify-self: center;
+                }
             }
         }
     }
