@@ -3,16 +3,13 @@
 .arrowWrapper {
     position: relative;
 
-    .topArrow {
+    .arrows {
+        display: flex;
+        flex-direction: column;
         position: fixed;
         right: 5%;
-        bottom: 4rem;
-    }
+        bottom: 4em;
 
-    .bottomArrow {
-        position: fixed;
-        right: 5%;
-        bottom: 2rem;
     }
 
     .projects {
