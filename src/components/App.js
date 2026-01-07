@@ -12,7 +12,6 @@ import Project from './Project.js';
 import About from './About.js';
 import Contact from './Contact.js';
 import Potpourri from './Potpourri.js';
-import TestZone from './TestZone.js';
 
 const handleClick = (e) => {
   // remove underline from all nav links
@@ -51,7 +50,6 @@ function App() {
               <NavLink as={Link} to="/about" onClick={handleClick}>about</NavLink>
               <NavLink as={Link} to="/contact" onClick={handleClick}>contact</NavLink>
               <NavLink as={Link} to="/potpourri" onClick={handleClick}>potpourri</NavLink>
-              <NavLink as={Link} to="/testzone" onClick={handleClick}>Test Zone</NavLink>
             </Nav>
           </Navbar.Collapse>
         </Container>
@@ -65,7 +63,6 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/potpourri" element={<Potpourri />} />
-          <Route path="/testzone" element={<TestZone />} />
           {projects.map(project => (
             <Route path={project.page_name} element={<Project projectTitle={project.title} />} />
           ))}

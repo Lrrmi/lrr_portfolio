@@ -4,7 +4,7 @@ $bottom-margin: 5vh;
 $project-card-height: calc(100vh - var(--nav-height) - ($bottom-margin * 2));
 
 .project {
-    overflow-x: auto;
+    overflow-x: hidden;
     overflow-y: hidden;
     white-space: nowrap;
     width: 100%;
@@ -14,14 +14,26 @@ $project-card-height: calc(100vh - var(--nav-height) - ($bottom-margin * 2));
     top: var(--nav-height);
 
     .drawLine {
+        position: fixed;
+        bottom: 0;
+        left: 5vw;
         width: 90vw;
         height: 1px;
-        background-color: $secondary-color;
-        margin-bottom: $bottom-margin;
-        margin-top: $bottom-margin;
-        margin-left: 5vw;
-        position: sticky;
-        left: 5vw;
+        background: $secondary-color;
+        margin-bottom: 2vh;
+    }
+
+    .arrows {
+        position: fixed;
+        display: flex;
+        right: 5%;
+        top: 6.5%;
+        z-index: 100000
+    }
+
+    .leftArrow {
+        display: block;
+        margin-bottom: 6px;
     }
 
     .project-card {

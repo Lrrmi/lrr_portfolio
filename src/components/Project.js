@@ -1,10 +1,12 @@
 import { GetProject } from '../scripts/projectDataHandler.js';
-import React from 'react';
+import React, { useRef } from 'react';
 import './../styles/project.scss';
+import { Link } from 'react-router-dom';
 
 export default function Project({ projectTitle }) {
     // Get data from database
     const project = GetProject(projectTitle);
+    const scrollRef = useRef(null);
 
     React.useEffect(() => {
         const modelViewer = document.querySelector(".modelViewer");
@@ -33,6 +35,8 @@ export default function Project({ projectTitle }) {
 
         window.addEventListener('wheel', onWheel, { passive: false });
 
+        const navbar = document.querySelector(".navbar");
+
         return () => {
             window.removeEventListener('wheel', onWheel);
             body.style.overflow = prevOverflow;
@@ -41,7 +45,19 @@ export default function Project({ projectTitle }) {
 
     if (!project) return <div>Loading...</div>;
     return (
-        <div className="project">
+        <div className="project" ref={scrollRef}>
+            <div className="arrows">
+                <Link className="leftArrow" onClick={() => {scrollRef.current?.scrollTo({left: 0, behavior: "smooth"})}}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#dfdedf" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"/>
+                    </svg>
+                </Link>
+                <Link className="rightArrow" onClick={() => {scrollRef.current?.scrollTo({left: scrollRef.current.scrollWidth, behavior: "smooth"})}}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#dfdedf" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                    </svg>
+                </Link>
+            </div>
             <div className="project-card">
                 <div className="projectDetails">
                     <h1>{project.title}</h1>
