@@ -17,10 +17,9 @@
         width: 100%;
         box-sizing: border-box;
         max-width: 100vw;
-        margin-left: calc(-43.5vw + 42rem);
 
         .projectNames {
-            flex: 0 auto;
+            flex: 0 5rem;
             width: max-content;
             text-align: right;
             margin-right: 20rem;
@@ -38,7 +37,7 @@
         }
 
         .projectsDisplay {
-            flex: .75;
+            flex: .6;
 
             .drawLine {
                 width: 100%;
