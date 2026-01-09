@@ -14,22 +14,22 @@ $bottom-margin: 5vh;
 
     }
 
-.potpourri {
-    margin-left: 3vw;
+    .potpourri {
+        margin-left: 3vw;
 
-    .drawLine {
-        position: absolute;
-        left: 2.7vw;
-        width: 84.5vw;
-        height: 1px;
-        background-color: $secondary-color;
-    }
+        .drawLine {
+            position: absolute;
+            left: 2.7vw;
+            width: 84.5vw;
+            height: 1px;
+            background-color: $secondary-color;
+        }
 
-    .potpourriImage {
-        margin: 0;
-        padding: 1.5vh 1.5vw;
-        vertical-align: top;
-        height: 18rem;
+        .potpourriImage {
+            margin: 0;
+            padding: 1.5vh 1.5vw;
+            vertical-align: top;
+            height: 18rem;
+        }
     }
-}
 }
