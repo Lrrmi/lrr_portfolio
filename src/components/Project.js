@@ -9,6 +9,42 @@ export default function Project({ projectTitle }) {
     const scrollRef = useRef(null);
 
     React.useEffect(() => {
+        const el = scrollRef.current;
+        if (!el) return;
+
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        const onDown = (e) => {
+            isDown = true;
+            el.classList.add("dragging");
+            startX = e.pageX || e.touches[0].pageX;
+            scrollLeft = el.scrollLeft;
+        };
+
+        const onMove = (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX || e.touches[0].pageX;
+            const walk = (x -startX) * 1.2;
+            el.scrollLeft = scrollLeft - walk;
+        }
+
+        const onUp = () => {
+            isDown = false;
+            el.classList.remove("dragging");
+        }
+
+        el.addEventListener("mousedown", onDown);
+        el.addEventListener("mousemove", onMove);
+        el.addEventListener("mouseup", onUp);
+        el.addEventListener("mouseleave", onUp);
+
+        el.addEventListener("touchstart", onDown, { passive: true });
+        el.addEventListener("touchmove", onMove, { passive: false });
+        el.addEventListener("touchend", onUp);
+
         const modelViewer = document.querySelector(".modelViewer");
         const modelColor = getComputedStyle(modelViewer).getPropertyValue('--primary-color');
 
@@ -30,7 +66,9 @@ export default function Project({ projectTitle }) {
 
         const onWheel = (e) => {
             e.preventDefault();
-            projectDiv.scrollLeft += e.deltaY;
+
+            const delta = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : e.deltaY;
+            projectDiv.scrollLeft += delta;
         };
 
         window.addEventListener('wheel', onWheel, { passive: false });
@@ -39,6 +77,12 @@ export default function Project({ projectTitle }) {
 
         return () => {
             window.removeEventListener('wheel', onWheel);
+            el.removeEventListener("mousedown", onDown);
+            el.removeEventListener("mousemove", onMove);
+            el.removeEventListener('mouseup', onUp);
+            el.removeEventListener("touchstart", onDown);
+            el.removeEventListener("touchmove", onMove);
+            el.removeEventListener("touchend", onUp);
             body.style.overflow = prevOverflow;
         };
     });
