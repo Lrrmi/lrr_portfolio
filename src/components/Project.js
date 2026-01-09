@@ -7,10 +7,12 @@ export default function Project({ projectTitle }) {
     // Get data from database
     const project = GetProject(projectTitle);
     const scrollRef = useRef(null);
+    const dragRef = useRef(null);
 
     React.useEffect(() => {
-        const el = scrollRef.current;
-        if (!el) return;
+        const dragEl = dragRef.current;
+        const scrollEl = scrollRef.current;
+        if (!scrollEl || !dragEl) return;
 
         let isDown = false;
         let startX;
@@ -18,9 +20,9 @@ export default function Project({ projectTitle }) {
 
         const onDown = (e) => {
             isDown = true;
-            el.classList.add("dragging");
+            scrollEl.classList.add("dragging");
             startX = e.pageX || e.touches[0].pageX;
-            scrollLeft = el.scrollLeft;
+            scrollLeft = scrollEl.scrollLeft;
         };
 
         const onMove = (e) => {
@@ -28,22 +30,21 @@ export default function Project({ projectTitle }) {
             e.preventDefault();
             const x = e.pageX || e.touches[0].pageX;
             const walk = (x -startX) * 1.2;
-            el.scrollLeft = scrollLeft - walk;
+            scrollEl.scrollLeft = scrollLeft - walk;
         }
 
         const onUp = () => {
             isDown = false;
-            el.classList.remove("dragging");
         }
 
-        el.addEventListener("mousedown", onDown);
-        el.addEventListener("mousemove", onMove);
-        el.addEventListener("mouseup", onUp);
-        el.addEventListener("mouseleave", onUp);
+        dragEl.addEventListener("mousedown", onDown);
+        dragEl.addEventListener("mousemove", onMove);
+        dragEl.addEventListener("mouseup", onUp);
+        dragEl.addEventListener("mouseleave", onUp);
 
-        el.addEventListener("touchstart", onDown, { passive: true });
-        el.addEventListener("touchmove", onMove, { passive: false });
-        el.addEventListener("touchend", onUp);
+        dragEl.addEventListener("touchstart", onDown, { passive: true });
+        dragEl.addEventListener("touchmove", onMove, { passive: false });
+        dragEl.addEventListener("touchend", onUp);
 
         const modelViewer = document.querySelector(".modelViewer");
         const modelColor = getComputedStyle(modelViewer).getPropertyValue('--primary-color');
@@ -77,12 +78,12 @@ export default function Project({ projectTitle }) {
 
         return () => {
             window.removeEventListener('wheel', onWheel);
-            el.removeEventListener("mousedown", onDown);
-            el.removeEventListener("mousemove", onMove);
-            el.removeEventListener('mouseup', onUp);
-            el.removeEventListener("touchstart", onDown);
-            el.removeEventListener("touchmove", onMove);
-            el.removeEventListener("touchend", onUp);
+            dragEl.removeEventListener("mousedown", onDown);
+            dragEl.removeEventListener("mousemove", onMove);
+            dragEl.removeEventListener('mouseup', onUp);
+            dragEl.removeEventListener("touchstart", onDown);
+            dragEl.removeEventListener("touchmove", onMove);
+            dragEl.removeEventListener("touchend", onUp);
             body.style.overflow = prevOverflow;
         };
     });
@@ -122,7 +123,7 @@ export default function Project({ projectTitle }) {
                         />
                     </div>
                 </div>
-                <div className="secondaryImageDisplay">
+                <div className="secondaryImageDisplay" ref={dragRef}>
                     {project.secondary_images.map(secondaryImage => (
                         <img src={secondaryImage} draggable="false" alt="Visual of the given project" />
                     ))}
