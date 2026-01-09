@@ -15,12 +15,12 @@ $bottom-margin: 5vh;
     }
 
 .potpourri {
-    margin-left: 5vw;
+    margin-left: 3vw;
 
     .drawLine {
         position: absolute;
-        // left: 5vw;
-        width: 82vw;
+        left: 2.7vw;
+        width: 84.5vw;
         height: 1px;
         background-color: $secondary-color;
     }
@@ -29,6 +29,7 @@ $bottom-margin: 5vh;
         margin: 0;
         padding: 1.5vh 1.5vw;
         vertical-align: top;
+        height: 18rem;
     }
 }
 }
