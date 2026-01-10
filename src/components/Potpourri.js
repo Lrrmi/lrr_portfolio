@@ -5,8 +5,15 @@ import Lightbox from "yet-another-react-lightbox";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import { useState } from 'react';
 
+function correctImagePaths(images, index) {
+    for (let i = 0; i < images.length; i++) {
+        images[i] = "./images/potpourri" + images[i].substring(1);
+    }
+}
 export default function Potpourri() {
     const [index, setIndex] = useState(-1);
+    let images = require.context("./../../public/images/potpourri", true, /.(png|jpe?g|svg)$/).keys();
+    correctImagePaths(images);
 
     return (
         <div className="arrowWrapper">
@@ -25,21 +32,21 @@ export default function Potpourri() {
                 <div className="drawLine"></div>
                 <br></br>
                 {potpourri.map((newImage, i) => (
-                    <img key={newImage} 
-                    draggable="false" 
-                    className="potpourriImage" 
-                    src={newImage} 
-                    alt="Visual of a project" 
-                    onClick={() => setIndex(i)}
+                    <img key={newImage}
+                        draggable="false"
+                        className="potpourriImage"
+                        src={newImage}
+                        alt="Visual of a project"
+                        onClick={() => setIndex(i)}
                     />
                 ))}
                 <Lightbox
-                plugins={[Zoom]}
-                open={index >= 0}
-                index={index}
-                close={() => setIndex(-1)}
-                slides={potpourri.map((img) => ({ src: img }))}
-                zoom={{ maxZoomPixelRatio: 4 }}
+                    plugins={[Zoom]}
+                    open={index >= 0}
+                    index={index}
+                    close={() => setIndex(-1)}
+                    slides={potpourri.map((img) => ({ src: img }))}
+                    zoom={{ maxZoomPixelRatio: 4 }}
                 />
             </div>
         </div>
