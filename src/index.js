@@ -8,6 +8,8 @@ import './index.css';
 import App from './components/App.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@google/model-viewer';
+import "yet-another-react-lightbox/styles.css";
+import "./styles.scss";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

@@ -8,3 +8,13 @@ h1 {
   color: $primary-color;
   font-family: 'Segoe UI', sans-serif;
 }
+
+.yarl__root {
+  background: rgba(0, 0, 0, 0.35) !important;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+  .yarl__container {
+    background: transparent !important;
+  }
