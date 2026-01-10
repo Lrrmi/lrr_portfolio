@@ -43,7 +43,6 @@ export default function Index() {
   useEffect(() => {
     // === Basic Setup ===
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color(595961);
 
     const camera = new THREE.PerspectiveCamera(
       75,
@@ -53,7 +52,8 @@ export default function Index() {
     );
     camera.position.set(0, 5, 10);
 
-    const renderer = new THREE.WebGLRenderer({ antialias: true });
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false });
+    renderer.setClearColor(0x595961, 1);
     renderer.setSize(
       mountRef.current.clientWidth,
       mountRef.current.clientHeight
