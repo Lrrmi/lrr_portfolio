@@ -43,7 +43,7 @@ export default function Index() {
   useEffect(() => {
     // === Basic Setup ===
     const scene = new THREE.Scene();
-    scene.background = new THREE.Color(0x5C5A65);
+    scene.background = new THREE.Color(595961);
 
     const camera = new THREE.PerspectiveCamera(
       75,
