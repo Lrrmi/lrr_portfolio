@@ -1,8 +1,14 @@
 import './../styles/potpourri.scss';
 import potpourri from './../potpourri.json';
 import { Link } from 'react-router-dom';
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
+import Zoom from "yet-another-react-lightbox/plugins/zoom";
+import { useState } from 'react';
 
 export default function Potpourri() {
+    const [index, setIndex] = useState(-1);
+
     return (
         <div className="arrowWrapper">
             <div className="arrows">
@@ -19,10 +25,23 @@ export default function Potpourri() {
             <div className="potpourri">
                 <div className="drawLine"></div>
                 <br></br>
-                {potpourri.map(newImage => (
-                    <img draggable="false" className="potpourriImage" src={newImage} alt="Visual of a project" />
+                {potpourri.map((newImage, i) => (
+                    <img key={newImage} 
+                    draggable="false" 
+                    className="potpourriImage" 
+                    src={newImage} 
+                    alt="Visual of a project" 
+                    onClick={() => setIndex(i)}
+                    />
                 ))}
-
+                <Lightbox
+                plugins={[Zoom]}
+                open={index >= 0}
+                index={index}
+                close={() => setIndex(-1)}
+                slides={potpourri.map((img) => ({ src: img }))}
+                zoom={{ maxZoomPixelRatio: 4 }}
+                />
             </div>
         </div>
     );
