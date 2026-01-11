@@ -1,7 +1,7 @@
 [
     {
         "title": "Seville",
-        "description": "<Insert Seville Chair Description>",
+        "description": "Seville’s modern style is designed to appeal to a broad audience through its configurable nature and clean form that allows it to take to various finishes.",
         "date": "11/05/2025",
         "page_name": "/seville",
         "primary_image": "/images/1Seville/Seville_Lineart_01.png",
@@ -10,7 +10,7 @@
     },
     {
         "title": "Slade",
-        "description": "<Insert Slade Description>",
+        "description": "Designed as a more masculine form, this deep-seated lounge's tapering wood elements follow its form, bringing interest at all angles.",
         "date": "11/05/2025",
         "page_name": "/slade",
         "primary_image": "/images/2Slade/Slade_Lineart_01.png",
@@ -19,56 +19,74 @@
     },
     {
         "title": "Savannah",
-        "description": "<Insert Savannah Description>",
+        "description": "Inspired by the picturesque city of Savannah, this sleek contemporary collection has exaggerated slopes creating a dynamic look while keeping its comfort.",
         "date": "11/05/2025",
         "page_name": "/savannah",
         "primary_image": "/images/3Savannah/Savannah_LineArt 01.png",
         "model": "/models/SAVDHChair.glb",
-        "secondary_images": ["/images/3Savannah/SAV_1.png", "/images/3Savannah/SAV_2.png", "/images/3Savannah/SAV_3.jpg"]
+        "secondary_images": ["/images/3Savannah/SAV_1.jpg", "/images/3Savannah/SAV_2.jpg", "/images/3Savannah/SAV_3.jpg"]
     },
     {
         "title": "Orchid",
-        "description": "<Insert Orchid Description>",
+        "description": "This robust farmhouse style collection designed for hospitality settings gives generous room and comfortability.",
         "date": "11/05/2025",
         "page_name": "/orchid",
         "primary_image": "/images/4Orchid/Orchid_Lineart 01.png",
         "model": "/models/CALDHChair.glb",
-        "secondary_images": ["/images/4Orchid/ORC_1.png", "/images/4Orchid/ORC_2.png", "/images/4Orchid/ORC_3.png", "/images/4Orchid/ORC_4.jpg"]
+        "secondary_images": ["/images/4Orchid/ORC_1.jpg", "/images/4Orchid/ORC_2.jpg", "/images/4Orchid/ORC_3.jpg", "/images/4Orchid/ORC_4.jpg"]
+    },
+    {
+        "title": "Cloister",
+        "description": "Having large arches with subtle curves and bronze adornments, the Cloister table was designed with a soft elegance all while making sure to enhance the chairs that accompany it.",
+        "date": "11/05/2025",
+        "page_name": "/cloister",
+        "primary_image": "/images/6Cloister/Cloister_Lineart 02.png",
+        "model": "/models/CloisterRect.glb",
+        "secondary_images": ["/images/6Cloister/CLO_1.jpg", "/images/6Cloister/CLO_2.jpg", "/images/6Cloister/CLO_3.jpg", "/images/6Cloister/CLO_4.jpg", "/images/6Cloister/CLO_5.jpg"]
     },
     {
         "title": "Light Weight",
-        "description": "<Insert Light Weight Description>",
+        "description": "Designed as a flat pack assembly, Light Weight is a contemporary lantern created to be easily moved to the location that its gentle illumination fits best in your environment.",
         "date": "11/05/2025",
         "page_name": "/lightweight",
         "primary_image": "/images/7LightWeight/LW_Lineart 02.png",
-        "model": "/models/LightWeight.glb",
-        "secondary_images": ["/images/7LightWeight/LightWeight_Parts.jpg", "/images/7LightWeight/LIW_1.png", "/images/7LightWeight/LIW_2.png", "/images/7LightWeight/LIW_3.jpg"]
+        "model": "/models/Lightweight.glb",
+        "secondary_images": ["/images/7LightWeight/LIW_1.jpg", "/images/7LightWeight/LIW_2.jpg", "/images/7LightWeight/LIW_3.jpg"]
+    },
+    {
+        "title": "Kokeshi",
+        "description": "Inspired by the the Japanese dolls, the Kokeshi Table shown here is a turned wood table dressed and polished in leather cordage.",
+        "date": "11/05/2025",
+        "page_name": "/kokeshi",
+        "primary_image": "/images/8Kokeshi/Kokeshi_Lineart 02.png",
+        "model": "/models/KokeshiDiningTable.glb",
+        "secondary_images": ["/images/8Kokeshi/KOK_1.JPG", "/images/8Kokeshi/KOK_2.JPG", "/images/8Kokeshi/KOK_3.JPG", "/images/8Kokeshi/KOK_4.JPG"]
     },
     {
         "title": "Edda",
-        "description": "<Insert Edda Description>",
+        "description": "Exalting stories by using furniture, this furniture design thesis collection offers a re-telling of old Norse folktales using ash and elm. The inlay and applied graphics portray the stories of Norse gods and giants, their  families, and the monsters within them.",
         "date": "11/05/2025",
         "page_name": "/edda",
-        "primary_image": "/images/9Edda/EDDA_1.JPG",
+        "primary_image": "/images/9Edda/EddaCab_Lineart 01.png",
         "model": "/models/EddaTable.glb",
-        "secondary_images": ["/images/9Edda/EDDA_2.JPG", "/images/9Edda/EDDA_3.JPG", "/images/9Edda/EDDA_4.JPG", "/images/9Edda/EDDA_5.JPG", "/images/9Edda/EDDA_6.JPG", "/images/9Edda/EDDA_7.JPG", "/images/9Edda/EDDA_8.JPG"]
+        "secondary_images": ["/images/9Edda/EDDA_1.JPG", "/images/9Edda/EDDA_2.JPG", "/images/9Edda/EDDA_3.JPG", "/images/9Edda/EDDA_5.JPG", "/images/9Edda/EDDA_6.JPG", "/images/9Edda/EDDA_7.JPG", "/images/9Edda/EDDA_8.JPG"]
     },
     {
         "title": "Para",
-        "description": "<Insert Para Description>",
+        "description": "A chair design to test the limits of using its unique thermally modified wood material, Para was made to see how thin one could make outdoor seating maintain structural integrity, all while keeping classical elements.",
         "date": "11/05/2025",
         "page_name": "/para",
-        "primary_image": "/images/10Para/PARA_1.JPG",
+        "primary_image": "/images/10Para/Para_Lineart 02.png",
         "model": "/models/ParaChair.glb",
-        "secondary_images": ["/images/10Para/PARA_2.JPG", "/images/10Para/PARA_3.JPG"]
+        "secondary_images": ["/images/10Para/PARA_1.JPG", "/images/10Para/PARA_2.JPG", "/images/10Para/PARA_3.JPG", "/images/10Para/PARA_4.JPG"]
     },
     {
         "title": "Saint Simon",
-        "description": "<Insert Saint Simon Description>",
+        "description": "Named after the island resort in Georgia, the Saint Simons is a contemporary take on the modern adirondack lounge chair. Designed out of HDPE this collection is easy to produce and made out of recycled materials to reduce environmental impact.",
         "date": "11/05/2025",
         "page_name": "/saintsimon",
-        "primary_image": "/images/11SaintSimon/STS_1.png",
-        "model": "/models/STSDHChair.glb",
-        "secondary_images": ["/images/11SaintSimon/STS_2.jpg", "/images/11SaintSimon/STS_3.png", "/images/11SaintSimon/STS_4.png"]
+        "primary_image": "/images/11SaintSimon/STS_Lineart.png",
+        "model": "/models/STSLoungeCup.glb",
+        "secondary_images": ["/images/11SaintSimon/STS_1.png", "/images/11SaintSimon/STS_2.jpg", "/images/11SaintSimon/STS_3.png", "/images/11SaintSimon/STS_4.png"]
     }
 ]
