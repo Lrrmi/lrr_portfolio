@@ -15,12 +15,13 @@ $bottom-margin: 5vh;
     }
 
     .potpourri {
-        margin-left: 3vw;
+        text-align: center;
 
         .drawLine {
             position: absolute;
-            left: 2.7vw;
-            width: 70rem;
+            top: -1rem;
+            left: -1rem;
+            width: calc(100% + 2rem);
             height: 1px;
             background-color: $secondary-color;
         }
