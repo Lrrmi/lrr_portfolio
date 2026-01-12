@@ -87,7 +87,7 @@
         "page_name": "/saintsimon",
         "primary_image": "/images/11SaintSimon/STS_Lineart.png",
         "model": "/models/STSLoungeCup.glb",
-        "secondary_images": ["/images/11SaintSimon/STS_1.png", "/images/11SaintSimon/STS_2.jpg", "/images/11SaintSimon/STS_3.png", "/images/11SaintSimon/STS_4.png"]
+        "secondary_images": ["/images/11SaintSimon/STS_1.jpg", "/images/11SaintSimon/STS_2.jpg", "/images/11SaintSimon/STS_3.jpg", "/images/11SaintSimon/STS_4.jpg"]
     },
     {
         "model": "/models/BlpCart.glb"
