@@ -115,7 +115,7 @@ export default function Project({ projectTitle }) {
                     <div className="modelViewerDiv">
                         <model-viewer
                             class="modelViewer"
-                            src={`${process.env.PUBLIC_URL}${project.model}`}
+                            src={process.env.PUBLIC_URL+project.model}
                             alt="A 3D model"
                             camera-controls
                             disable-pan
@@ -126,7 +126,7 @@ export default function Project({ projectTitle }) {
                 </div>
                 <div className="secondaryImageDisplay" ref={dragRef}>
                     {project.secondary_images.map(secondaryImage => (
-                        <img src={`${process.env.PUBLIC_URL}${secondaryImage}`} draggable="false" alt="Visual of the given project" />
+                        <img src={process.env.PUBLIC_URL+secondaryImage} draggable="false" alt="Visual of the given project" />
                     ))}
                 </div>
             </div>
