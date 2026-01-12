@@ -45,7 +45,7 @@ export default function Potpourri() {
                     open={index >= 0}
                     index={index}
                     close={() => setIndex(-1)}
-                    slides={potpourri.map((img) => ({ src: img }))}
+                    slides={potpourri.map((img) => ({ src: process.env.PUBLIC_URL+img }))}
                     zoom={{ maxZoomPixelRatio: 4 }}
                 />
             </div>
