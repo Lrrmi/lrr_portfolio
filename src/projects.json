@@ -90,84 +90,31 @@
         "secondary_images": ["/images/11SaintSimon/STS_1.png", "/images/11SaintSimon/STS_2.jpg", "/images/11SaintSimon/STS_3.png", "/images/11SaintSimon/STS_4.png"]
     },
     {
-        "title": "",
-        "description": "placeholder",
-        "date": "11/05/2025",
-        "page_name": "/placeholder",
-        "primary_image": "/placeholder.png",
-        "model": "/models/BlpCart.glb",
-        "secondary_images": [""]
+        "model": "/models/BlpCart.glb"
     },
     {
-        "title": "",
-        "description": "placeholder",
-        "date": "11/05/2025",
-        "page_name": "/placeholder",
-        "primary_image": "/placeholder.png",
-        "model": "/models/EllsworthTable.glb",
-        "secondary_images": [""]
+        "model": "/models/EllsworthTable.glb"
     },
     {
-        "title": "",
-        "description": "placeholder",
-        "date": "11/05/2025",
-        "page_name": "/placeholder",
-        "primary_image": "/placeholder.png",
-        "model": "/models/FitzPetite.glb",
-        "secondary_images": [""]
+        "model": "/models/FitzPetite.glb"
     },
     {
-        "title": "",
-        "description": "placeholder",
-        "date": "11/05/2025",
-        "page_name": "/placeholder",
-        "primary_image": "/placeholder.png",
-        "model": "/models/FoldingRack.glb",
-        "secondary_images": [""]
+        "model": "/models/FoldingRack.glb"
     },
     {
-        "title": "",
-        "description": "placeholder",
-        "date": "11/05/2025",
-        "page_name": "/placeholder",
-        "primary_image": "/placeholder.png",
-        "model": "/models/LegatoSide.glb",
-        "secondary_images": [""]
+        "model": "/models/LegatoSide.glb"
     },
     {
-        "title": "",
-        "description": "placeholder",
-        "date": "11/05/2025",
-        "page_name": "/placeholder",
-        "primary_image": "/placeholder.png",
-        "model": "/models/PortreroBench.glb",
-        "secondary_images": [""]
+        "model": "/models/PortreroBench.glb"
     },
     {
-        "title": "",
-        "description": "placeholder",
-        "date": "11/05/2025",
-        "page_name": "/placeholder",
-        "primary_image": "/placeholder.png",
-        "model": "/models/RussConceptChair.glb",
-        "secondary_images": [""]
+        
+        "model": "/models/RussConceptChair.glb"
     },
     {
-        "title": "",
-        "description": "placeholder",
-        "date": "11/05/2025",
-        "page_name": "/placeholder",
-        "primary_image": "/placeholder.png",
-        "model": "/models/SAVDHTable.glb",
-        "secondary_images": [""]
+        "model": "/models/SAVDHTable.glb"
     },
     {
-        "title": "",
-        "description": "placeholder",
-        "date": "11/05/2025",
-        "page_name": "/placeholder",
-        "primary_image": "/placeholder.png",
-        "model": "/models/SushiLamp.glb",
-        "secondary_images": [""]
+        "model": "/models/SushiLamp.glb"
     }
 ]

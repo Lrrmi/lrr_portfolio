@@ -24,7 +24,7 @@ export default function Projects() {
                 <div className="projectNames">
                     <div>
                     {projects.map(project => (
-                        <Link class="projectLink" to={project.page_name}>{project.title}</Link>
+                        project.title ? <Link class="projectLink" to={project.page_name}>{project.title}</Link> : null
                     ))}
                     </div>
                 </div>
@@ -32,7 +32,7 @@ export default function Projects() {
                     <div className="drawLine" />
                     <div className="projectsDisplayContainer">
                         {projects.map(project => (
-                            <Link draggable="false" class="projectImageLink" to={project.page_name}><img draggable="false" src={project.primary_image} alt="Visual of the given project" /></Link>
+                            project.page_name ? <Link draggable="false" class="projectImageLink" to={project.page_name}><img draggable="false" src={project.primary_image} alt="Visual of the given project" /></Link> : null
                         ))}
                     </div>
                 </div>

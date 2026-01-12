@@ -22,11 +22,11 @@ export function GetProject(projectTitle) {
 }
 
 function ValidateProject(project) {
-    if (!("title" in project)) return false;
-    if (!("description" in project)) project["description"] = "";
-    if (!("date" in project)) project["date"] = "Undated";
-    if (!("page_name" in project)) project["page_name"] = "/" + project["title"];
-    if (!("primary_image" in project)) project["primary_image"] = "/images/Prinnyart.png";
-    if (!("model" in project)) project["model"] = "/models/SevilleChair.glb";
+    if (!("title" in project)) project["title"] = null;
+    if (!("description" in project)) project["description"] = null;
+    if (!("date" in project)) project["date"] = null;
+    if (!("page_name" in project)) project["page_name"] = null;
+    if (!("primary_image" in project)) project["primary_image"] = null;
+    if (!("model" in project)) project["model"] = null;
     return project;
 }
