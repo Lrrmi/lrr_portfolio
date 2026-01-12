@@ -50,7 +50,7 @@
         "date": "11/05/2025",
         "page_name": "/lightweight",
         "primary_image": "/images/7LightWeight/LW_Lineart 02.png",
-        "model": "/models/Lightweight.glb",
+        "model": "/models/LightWeight.glb",
         "secondary_images": ["/images/7LightWeight/LIW_1.jpg", "/images/7LightWeight/LIW_2.jpg", "/images/7LightWeight/LIW_3.jpg"]
     },
     {
@@ -60,7 +60,7 @@
         "page_name": "/kokeshi",
         "primary_image": "/images/8Kokeshi/Kokeshi_Lineart 02.png",
         "model": "/models/KokeshiDiningTable.glb",
-        "secondary_images": ["/images/8Kokeshi/KOK_1.JPG", "/images/8Kokeshi/KOK_2.JPG", "/images/8Kokeshi/KOK_3.JPG", "/images/8Kokeshi/KOK_4.JPG"]
+        "secondary_images": ["/images/8Kokeshi/KOK_1.jpg", "/images/8Kokeshi/KOK_2.jpg", "/images/8Kokeshi/KOK_3.jpg", "/images/8Kokeshi/KOK_4.jpg"]
     },
     {
         "title": "Edda",
@@ -69,7 +69,7 @@
         "page_name": "/edda",
         "primary_image": "/images/9Edda/EddaCab_Lineart 01.png",
         "model": "/models/EddaTable.glb",
-        "secondary_images": ["/images/9Edda/EDDA_1.JPG", "/images/9Edda/EDDA_2.JPG", "/images/9Edda/EDDA_3.JPG", "/images/9Edda/EDDA_5.JPG", "/images/9Edda/EDDA_6.JPG", "/images/9Edda/EDDA_7.JPG", "/images/9Edda/EDDA_8.JPG"]
+        "secondary_images": ["/images/9Edda/EDDA_1.jpg", "/images/9Edda/EDDA_2.jpg", "/images/9Edda/EDDA_3.jpg", "/images/9Edda/EDDA_5.jpg", "/images/9Edda/EDDA_6.jpg", "/images/9Edda/EDDA_7.jpg", "/images/9Edda/EDDA_8.jpg"]
     },
     {
         "title": "Para",
@@ -78,7 +78,7 @@
         "page_name": "/para",
         "primary_image": "/images/10Para/Para_Lineart 02.png",
         "model": "/models/ParaChair.glb",
-        "secondary_images": ["/images/10Para/PARA_1.JPG", "/images/10Para/PARA_2.JPG", "/images/10Para/PARA_3.JPG", "/images/10Para/PARA_4.JPG"]
+        "secondary_images": ["/images/10Para/PARA_1.jpg", "/images/10Para/PARA_2.jpg", "/images/10Para/PARA_3.jpg", "/images/10Para/PARA_4.jpg"]
     },
     {
         "title": "Saint Simon",
