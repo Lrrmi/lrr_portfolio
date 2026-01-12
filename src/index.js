@@ -200,14 +200,14 @@ export default function Index() {
     }
 
     function randomlySelectProject(max, num) {
-      var nums = [];
+      const nums = [];
       for (let i = 0; i <= max; i++) {
         nums.push(i);
       }
 
-      var randomly = []
+      const randomly = []
       for (let i = 0; i < num; i++) {
-        var rand = getRandomInt(0, num - i - 1);
+        const rand = getRandomInt(0, nums.length - 1);
         randomly.push(nums[rand]);
         nums.splice(rand, 1);
       }
