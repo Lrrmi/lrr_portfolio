@@ -110,7 +110,7 @@ export default function Project({ projectTitle }) {
                 </div>
                 <div className="primaryImageDisplay">
                     <div className="primaryImageDiv">
-                        <img draggable="false" src={project.primary_image} alt="Visual of the given project" />
+                        <img draggable="false" src={process.env.PUBLIC_URL+project.primary_image} alt="Visual of the given project" />
                     </div>
                     <div className="modelViewerDiv">
                         <model-viewer

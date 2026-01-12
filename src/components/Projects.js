@@ -32,7 +32,7 @@ export default function Projects() {
                     <div className="drawLine" />
                     <div className="projectsDisplayContainer">
                         {projects.map(project => (
-                            project.page_name ? <Link draggable="false" class="projectImageLink" to={project.page_name}><img draggable="false" src={project.primary_image} alt="Visual of the given project" /></Link> : null
+                            project.page_name ? <Link draggable="false" class="projectImageLink" to={project.page_name}><img draggable="false" src={process.env.PUBLIC_URL+project.primary_image} alt="Visual of the given project" /></Link> : null
                         ))}
                     </div>
                 </div>
