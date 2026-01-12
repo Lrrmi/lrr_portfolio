@@ -4,7 +4,7 @@ export default function About() {
     return (
         <div className="about">
             <div className="aboutDiv">
-                <img draggable="false" className="aboutImage" src="/images/DSC_9635.jpg" alt="Lee Adams"></img>
+                <img draggable="false" className="aboutImage" src={process.env.PUBLIC_URL+"/images/DSC_9635.jpg"} alt="Lee Adams"></img>
                 <div className="aboutContent">
                     <h2 className="aboutHeader">Design Philosophy</h2>
                     <p>

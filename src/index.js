@@ -120,7 +120,7 @@ export default function Index() {
       const size = 2;
 
       let randomProjectIndex = projectIndexes[i];
-      const projectModel = projects[randomProjectIndex].model;
+      const projectModel = process.env.PUBLIC_URL+projects[randomProjectIndex].model;
 
       loader.load(projectModel, (gltf) => {
         const model = gltf.scene;

@@ -35,7 +35,7 @@ export default function Potpourri() {
                     <img key={newImage}
                         draggable="false"
                         className="potpourriImage"
-                        src={newImage}
+                        src={process.env.PUBLIC_URL+newImage}
                         alt="Visual of a project"
                         onClick={() => setIndex(i)}
                     />
